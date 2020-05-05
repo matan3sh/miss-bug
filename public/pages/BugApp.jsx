@@ -37,7 +37,7 @@ export default class BugApp extends React.Component {
   };
 
   onEdit = (bug) => {
-    this.setState({ current: bug, isEdit: true });
+    this.setState(({ isEdit }) => ({ isEdit: !isEdit, current: bug }));
   };
 
   render() {
