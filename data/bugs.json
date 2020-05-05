@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "N5ikIu",
+    "title": "The Last Dance!",
+    "description": "Some Description",
+    "severity": "5",
+    "creator": {
+      "nickname": "Mavs412"
+    }
+  },
+  {
+    "_id": "yCB7jd",
+    "title": "Bug Added when Click",
+    "description": "problem when Add",
+    "severity": "4",
+    "creator": {
+      "nickname": "Matan 34"
+    }
+  },
+  {
+    "_id": "efg123",
+    "title": "Bug number 2",
+    "description": "problem when clicking Delete",
+    "severity": 3,
+    "createdAt": 1542107359454,
+    "creator": {
+      "nickname": "Matan Shaviro"
+    }
+  }
+]
