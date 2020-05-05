@@ -26,7 +26,7 @@ export default class BugEdit extends React.Component {
       title,
       description,
       severity,
-      createdAt,
+      createdAt: this.props.current.createdAt,
       creator: { nickname: this.state.creator },
     };
     this.props.onSave(bug);
@@ -58,7 +58,7 @@ export default class BugEdit extends React.Component {
           value={description}
           onChange={this.onChange}
         />
-        <h5>Severity</h5>
+        <h5>Severity: {severity}</h5>
         <input
           type='range'
           name='severity'

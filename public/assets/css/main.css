@@ -158,6 +158,10 @@ ul {
   color: #fff;
 }
 
+.btn:hover {
+  opacity: 0.8;
+}
+
 /* Badge */
 .badge {
   font-size: 0.8rem;
@@ -281,6 +285,7 @@ input[type='text'],
 input[type='email'],
 input[type='password'],
 input[type='date'],
+input[type='range'],
 select,
 textarea {
   display: block;

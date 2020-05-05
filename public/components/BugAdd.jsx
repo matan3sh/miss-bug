@@ -31,10 +31,13 @@ export default class BugForm extends React.Component {
       creator: { nickname: this.state.bug.creator },
     };
     this.props.onSave(bug);
+    this.setState({
+      bug: { title: '', description: '', severity: this.onChange, creator: '' },
+    });
   };
 
   render() {
-    const { title, description, severity, creator } = this.state;
+    const { title, description, severity, creator } = this.state.bug;
     return (
       <form onSubmit={this.onSubmit}>
         <h2 className='text-dark'>Add Bug</h2>
@@ -59,7 +62,7 @@ export default class BugForm extends React.Component {
           value={description}
           onChange={this.onChange}
         />
-        <h5>Severity</h5>
+        <h5>Severity: {this.state.bug.severity}</h5>
         <input
           type='range'
           name='severity'

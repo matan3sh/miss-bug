@@ -1,42 +1,22 @@
 [
   {
+    "_id": "7iPFBt",
+    "title": "The Last Dance!!",
+    "description": "Some Description",
+    "severity": "4",
+    "createdAt": 1588664505354,
+    "creator": {
+      "nickname": "Mavs41"
+    }
+  },
+  {
     "title": "Activity Planner",
     "description": "Some Description",
-    "severity": "2",
+    "severity": "3",
     "creator": {
       "nickname": "Mavs41"
     },
-    "_id": "ajJvVb",
-    "createdAt": 1588659450667
-  },
-  {
-    "_id": "N5ikIu",
-    "title": "The Last Dance!",
-    "description": "Some Description",
-    "severity": "5",
-    "createdAt": 1542107359454,
-    "creator": {
-      "nickname": "Mavs412"
-    }
-  },
-  {
-    "_id": "yCB7jd",
-    "title": "Bug Added when Click",
-    "description": "problem when Add",
-    "severity": "4",
-    "createdAt": 1542107359454,
-    "creator": {
-      "nickname": "Matan 34"
-    }
-  },
-  {
-    "_id": "efg123",
-    "title": "Bug number 2",
-    "description": "problem when clicking Delete",
-    "severity": 3,
-    "createdAt": 1542107359454,
-    "creator": {
-      "nickname": "Matan Shaviro"
-    }
+    "_id": "QdgT3Z",
+    "createdAt": 1588664299986
   }
 ]
