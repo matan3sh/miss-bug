@@ -1,5 +1,16 @@
 [
   {
+    "title": "Server Side Rendering",
+    "description": "Test Description by me",
+    "severity": "2",
+    "creator": {
+      "nickname": "matan3sh",
+      "_id": "g5r5sZ"
+    },
+    "_id": "BrsySp",
+    "createdAt": 1588766591450
+  },
+  {
     "title": "Bug By Admin",
     "description": "admin desc",
     "severity": "4",
@@ -20,17 +31,6 @@
       "nickname": "test",
       "_id": "WsSNlR"
     }
-  },
-  {
-    "title": "Testing title",
-    "description": "Some Test Bug User",
-    "severity": "2",
-    "creator": {
-      "nickname": "matan3sh",
-      "_id": "g5r5sZ"
-    },
-    "_id": "GTIn0r",
-    "createdAt": 1588759582237
   },
   {
     "title": "The Last Dance!!",
