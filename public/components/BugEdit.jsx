@@ -27,7 +27,10 @@ export default class BugEdit extends React.Component {
       description,
       severity,
       createdAt: Date.now(),
-      creator: { nickname: this.state.creator },
+      creator: {
+        nickname: this.state.creator,
+        _id: this.props.current.creator._id,
+      },
     };
     this.props.onSave(bug);
   };

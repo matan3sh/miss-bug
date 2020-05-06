@@ -1,42 +1,35 @@
 [
   {
-    "title": "Testing Bug",
-    "description": "just another testing bug",
-    "severity": 1,
-    "creator": {
-      "nickname": "test"
-    },
-    "_id": "8WThlp",
-    "createdAt": 1588756562866
-  },
-  {
-    "_id": "FFViUJ",
-    "title": "The Last Dance!",
-    "description": "Some Description2",
-    "severity": "2",
-    "createdAt": 1588743868704,
-    "creator": {
-      "nickname": "user"
-    }
-  },
-  {
-    "_id": "hg7ldb",
-    "title": "Just Title2",
+    "title": "Hacking",
     "description": "Try to check if auth works",
     "severity": "5",
-    "createdAt": 1588696009305,
     "creator": {
-      "nickname": "matan3sh"
-    }
+      "nickname": "test",
+      "_id": "WsSNlR"
+    },
+    "_id": "XM0M03",
+    "createdAt": 1588759610501
   },
   {
-    "_id": "QdgT3Z",
-    "title": "Activity Planner2",
-    "description": "Some Description",
-    "severity": "3",
-    "createdAt": 1588743894618,
+    "title": "Testing title",
+    "description": "Some Test Bug User",
+    "severity": "2",
     "creator": {
-      "nickname": "user"
-    }
+      "nickname": "matan3sh",
+      "_id": "g5r5sZ"
+    },
+    "_id": "GTIn0r",
+    "createdAt": 1588759582237
+  },
+  {
+    "title": "The Last Dance!!",
+    "description": "Some Test Bug User",
+    "severity": "2",
+    "creator": {
+      "nickname": "test",
+      "_id": "WsSNlR"
+    },
+    "_id": "eIPm4D",
+    "createdAt": 1588759364965
   }
 ]

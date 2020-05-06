@@ -83,7 +83,7 @@ export default class BugApp extends React.Component {
                 {isEdit ? (
                   <BugEdit current={current} onSave={this.onSave} />
                 ) : (
-                  <BugAdd onSave={this.onSave} user={user.username} />
+                  <BugAdd onSave={this.onSave} user={user} />
                 )}
               </div>
               <div>

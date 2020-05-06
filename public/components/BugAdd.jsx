@@ -28,7 +28,7 @@ export default class BugForm extends React.Component {
       title,
       description,
       severity,
-      creator: { nickname: this.props.user },
+      creator: { nickname: this.props.user.username, _id: this.props.user._id },
     };
     this.props.onSave(bug);
     this.setState({
@@ -37,7 +37,7 @@ export default class BugForm extends React.Component {
   };
 
   render() {
-    const { title, description, severity, creator } = this.state.bug;
+    const { title, description, severity } = this.state.bug;
     return (
       <form onSubmit={this.onSubmit}>
         <h2 className='text-dark'>Add Bug</h2>
@@ -45,7 +45,7 @@ export default class BugForm extends React.Component {
           type='text'
           placeholder='Username'
           name='creator'
-          value={this.props.user}
+          value={this.props.user.username}
           onChange={this.onChange}
         />
         <input

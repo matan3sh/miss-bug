@@ -32,7 +32,13 @@ const Navbar = ({ user, onLogout }) => {
                 alt='user-avatar'
                 className='user-avatar'
               />
-              <NavLink activeClassName='nav-active'>{user.username}</NavLink>
+              <NavLink
+                exact
+                to={`/users/${user._id}`}
+                activeClassName='nav-active'
+              >
+                {user.username}
+              </NavLink>
             </li>
           </React.Fragment>
         )}

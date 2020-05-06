@@ -1,3 +1,5 @@
+const { Link } = ReactRouterDOM;
+
 export default function BugPreview({ bug, onDelete, onEdit, user }) {
   return (
     <div className='card bg-light'>
@@ -15,8 +17,10 @@ export default function BugPreview({ bug, onDelete, onEdit, user }) {
       </h3>
       <span className='created-at text-grey'>
         <span className='text-black'>BUG #{bug._id}</span> last updated by
-        <span className='text-black'> {bug.creator.nickname}</span> on{' '}
-        {new Date(bug.createdAt).toDateString()}
+        <Link to={`/users/${bug.creator._id}`}>
+          <span className='text-black'> {bug.creator.nickname}</span>
+        </Link>{' '}
+        on {new Date(bug.createdAt).toDateString()}
       </span>
       {user.username === bug.creator.nickname || user.isAdmin ? (
         <p className='my-1'>
