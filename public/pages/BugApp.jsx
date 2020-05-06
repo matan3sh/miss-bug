@@ -15,7 +15,6 @@ export default class BugApp extends React.Component {
     isEdit: false,
     user: userService.getLoggedinUser(),
     alert: false,
-    alertMsg: '',
   };
 
   componentDidMount() {
@@ -25,8 +24,8 @@ export default class BugApp extends React.Component {
   onLogin = (credentials) => {
     userService.login(credentials).then((user) => this.setState({ user }));
     if (this.state.user === null) {
-      this.setState({ alert: true, alertMsg: 'Invalid Credentials' });
-      setTimeout(() => this.setState({ alert: false, alertMsg: '' }), 3000);
+      this.setState({ alert: true });
+      setTimeout(() => this.setState({ alert: false }), 3000);
     }
   };
 
@@ -62,7 +61,7 @@ export default class BugApp extends React.Component {
   };
 
   render() {
-    const { user, bugs, current, isEdit, alert, alertMsg } = this.state;
+    const { user, bugs, current, isEdit, alert } = this.state;
     return (
       <React.Fragment>
         <Navbar user={user} onLogout={this.onLogout} />
@@ -71,7 +70,7 @@ export default class BugApp extends React.Component {
             <div className='grid-1'>
               {alert ? (
                 <div className='form-container'>
-                  <Alert alertMsg={alertMsg} />
+                  <Alert alertMsg={'Invalid Credentials'} />
                 </div>
               ) : (
                 ''

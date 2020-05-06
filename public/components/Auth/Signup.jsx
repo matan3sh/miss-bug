@@ -10,7 +10,6 @@ export default class Signup extends React.Component {
     password: '',
     passConfirmation: '',
     alert: false,
-    alertMsg: '',
   };
 
   onChange = ({ target }) => {
@@ -28,8 +27,8 @@ export default class Signup extends React.Component {
     e.preventDefault();
     const { passConfirmation, password } = this.state;
     if (password !== passConfirmation) {
-      this.setState({ alert: true, alertMsg: 'Password Not Match' });
-      setTimeout(() => this.setState({ alert: false, alertMsg: '' }), 2500);
+      this.setState({ alert: true });
+      setTimeout(() => this.setState({ alert: false }), 2500);
     } else {
       const credentials = {
         username: this.state.username,
@@ -41,13 +40,7 @@ export default class Signup extends React.Component {
   };
 
   render() {
-    const {
-      username,
-      password,
-      passConfirmation,
-      alert,
-      alertMsg,
-    } = this.state;
+    const { username, password, passConfirmation, alert } = this.state;
     return (
       <React.Fragment>
         <Navbar />
@@ -55,7 +48,7 @@ export default class Signup extends React.Component {
           <h1>
             Account <span className='text-primary'>Signup</span>
           </h1>
-          {alert ? <Alert alertMsg={alertMsg} /> : ''}
+          {alert ? <Alert alertMsg={'Password Not Match'} /> : ''}
           <form onSubmit={this.onSubmit}>
             <div className='form-group'>
               <label htmlFor='name'>Username</label>
