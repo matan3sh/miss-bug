@@ -20,13 +20,13 @@ export default class BugEdit extends React.Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    const { _id, title, description, severity, createdAt } = this.state;
+    const { _id, title, description, severity } = this.state;
     const bug = {
       _id,
       title,
       description,
       severity,
-      createdAt: this.props.current.createdAt,
+      createdAt: Date.now(),
       creator: { nickname: this.state.creator },
     };
     this.props.onSave(bug);

@@ -4,7 +4,7 @@ export default class BugList extends React.Component {
   state = {};
 
   render() {
-    const { bugs, onDelete, onEdit } = this.props;
+    const { bugs, onDelete, onEdit, user } = this.props;
     return (
       <div>
         {bugs.map((bug) => (
@@ -13,6 +13,7 @@ export default class BugList extends React.Component {
             bug={bug}
             onDelete={onDelete}
             onEdit={onEdit}
+            user={user}
           />
         ))}
       </div>

@@ -3,7 +3,7 @@ export default class BugForm extends React.Component {
     bug: {
       title: '',
       description: '',
-      severity: 0,
+      severity: 1,
       creator: '',
     },
   };
@@ -28,7 +28,7 @@ export default class BugForm extends React.Component {
       title,
       description,
       severity,
-      creator: { nickname: this.state.bug.creator },
+      creator: { nickname: this.props.user },
     };
     this.props.onSave(bug);
     this.setState({
@@ -45,7 +45,7 @@ export default class BugForm extends React.Component {
           type='text'
           placeholder='Username'
           name='creator'
-          value={creator}
+          value={this.props.user}
           onChange={this.onChange}
         />
         <input

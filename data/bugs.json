@@ -1,22 +1,32 @@
 [
   {
-    "_id": "7iPFBt",
-    "title": "The Last Dance!!",
-    "description": "Some Description",
-    "severity": "4",
-    "createdAt": 1588664505354,
+    "_id": "FFViUJ",
+    "title": "The Last Dance!",
+    "description": "Some Description2",
+    "severity": "2",
+    "createdAt": 1588743868704,
     "creator": {
-      "nickname": "Mavs41"
+      "nickname": "user"
     }
   },
   {
-    "title": "Activity Planner",
+    "_id": "hg7ldb",
+    "title": "Just Title2",
+    "description": "Try to check if auth works",
+    "severity": "5",
+    "createdAt": 1588696009305,
+    "creator": {
+      "nickname": "matan3sh"
+    }
+  },
+  {
+    "_id": "QdgT3Z",
+    "title": "Activity Planner2",
     "description": "Some Description",
     "severity": "3",
+    "createdAt": 1588743894618,
     "creator": {
-      "nickname": "Mavs41"
-    },
-    "_id": "QdgT3Z",
-    "createdAt": 1588664299986
+      "nickname": "user"
+    }
   }
 ]
