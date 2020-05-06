@@ -1,5 +1,15 @@
 [
   {
+    "title": "Testing Bug",
+    "description": "just another testing bug",
+    "severity": 1,
+    "creator": {
+      "nickname": "test"
+    },
+    "_id": "8WThlp",
+    "createdAt": 1588756562866
+  },
+  {
     "_id": "FFViUJ",
     "title": "The Last Dance!",
     "description": "Some Description2",

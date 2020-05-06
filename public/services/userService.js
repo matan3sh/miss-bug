@@ -7,11 +7,21 @@ export default {
   login,
   logout,
   signup,
+  remove,
+  getById,
   getLoggedinUser,
 };
 
 function query() {
   return axios.get('/api/users').then((res) => res.data);
+}
+
+function remove(userId) {
+  return axios.delete(`/api/users/${userId}`).then((res) => res.data);
+}
+
+function getById(userId) {
+  return axios.get(`/api/users/${userId}`).then((res) => res.data);
 }
 
 function login(credentials) {

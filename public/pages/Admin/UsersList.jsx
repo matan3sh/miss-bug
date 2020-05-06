@@ -23,6 +23,11 @@ export default class UsersList extends React.Component {
     this.props.history.push('/');
   };
 
+  onDelete = (userId) => {
+    userService.remove(userId);
+    this.loadUsers();
+  };
+
   render() {
     const { user, users } = this.state;
     return (
@@ -32,7 +37,11 @@ export default class UsersList extends React.Component {
           {users && (
             <div className='grid-4'>
               {users.map((user) => (
-                <UserPreview key={user.id} user={user} />
+                <UserPreview
+                  key={user._id}
+                  user={user}
+                  onDelete={this.onDelete}
+                />
               ))}
             </div>
           )}

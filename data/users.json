@@ -1,21 +1,21 @@
 [
   {
+    "username": "test",
+    "password": "testtest",
+    "_id": "WsSNlR",
+    "createdAt": 1588756535101
+  },
+  {
     "username": "admin",
     "password": "admin",
-    "id": "9PuqWw",
+    "_id": "9PuqWw",
     "createdAt": 1588699277094,
     "isAdmin": true
   },
   {
     "username": "matan3sh",
     "password": "123456",
-    "id": "g5r5sZ",
-    "createdAt": 1588685922017
-  },
-  {
-    "username": "user",
-    "password": "123456",
-    "id": "c65r6a",
+    "_id": "g5r5sZ",
     "createdAt": 1588685922017
   }
 ]

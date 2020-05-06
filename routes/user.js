@@ -7,6 +7,16 @@ router.get('/users', (req, res) => {
   userService.query().then((users) => res.json(users));
 });
 
+// Get Single User
+router.get('/users/:id', (req, res) => {
+  userService.getById(req.params.id).then((user) => res.json(user));
+});
+
+// Delete User
+router.delete('/users/:id', (req, res) => {
+  userService.remove(req.params.id).then((user) => res.json(user));
+});
+
 // Signup new user
 router.post('/signup', (req, res) => {
   userService.save(req.body).then((user) => {
