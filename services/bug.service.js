@@ -1,8 +1,18 @@
 const fs = require('fs');
 const bugs = require('../data/bugs.json');
 
-function query() {
-  return Promise.resolve(bugs);
+function query(criteria) {
+  var bugsToReturn = bugs;
+  if (criteria.q) {
+    bugsToReturn = bugsToReturn.filter((bug) => bug.title.includes(criteria.q));
+  }
+  if (criteria.offset) {
+    bugsToReturn = bugsToReturn.slice(criteria.offset);
+  }
+  if (criteria.limit) {
+    bugsToReturn = bugsToReturn.slice(0, criteria.limit);
+  }
+  return Promise.resolve(bugsToReturn);
 }
 
 function getById(bugId) {

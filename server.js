@@ -1,12 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
 // App Init
 const app = express();
 app.use(bodyParser.json());
-app.use(cookieParser());
 app.use(express.static('public'));
 app.use(
   session({

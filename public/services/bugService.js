@@ -5,6 +5,7 @@ export default {
   query,
   remove,
   save,
+  getUserBugsNo,
 };
 
 function query() {
@@ -43,6 +44,10 @@ function save(bug) {
         return savedBug;
       });
   }
+}
+
+function getUserBugsNo(user) {
+  return gBugs.filter((bug) => bug.creator._id === user._id).length;
 }
 
 function _getIdxById(bugId) {

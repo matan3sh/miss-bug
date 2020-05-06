@@ -4,7 +4,12 @@ const bugService = require('../services/bug.service');
 
 // Get All Bugs
 router.get('/', (req, res) => {
-  bugService.query().then((bugs) => res.json(bugs));
+  const criteria = {
+    limit: +req.query.limit,
+    offset: +req.query.offset,
+    q: req.query.q,
+  };
+  bugService.query(criteria).then((bugs) => res.json(bugs));
 });
 
 // Get Single Bug

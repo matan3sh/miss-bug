@@ -1,4 +1,5 @@
 import userService from '../services/userService.js';
+import bugService from '../services/bugService.js';
 import Navbar from '../components/Layout/Navbar.jsx';
 
 export default class UserDetails extends React.Component {
@@ -15,6 +16,10 @@ export default class UserDetails extends React.Component {
     });
   };
 
+  getUserBugsNo = (user) => {
+    return bugService.getUserBugsNo(user);
+  };
+
   render() {
     const { user } = this.state;
     return (
@@ -23,14 +28,22 @@ export default class UserDetails extends React.Component {
         {!user ? (
           <p>Loading...</p>
         ) : (
-          <div className='container'>
-            <div className='grid-1 card-form'>
-              <h3>
-                User Details: {user.username}{' '}
-                <span className='badge badge-dark'>
-                  {user.isAdmin ? 'administrator' : 'user'}
-                </span>
-              </h3>
+          <div className='user-container'>
+            <div className='grid-2 card-form'>
+              <div>
+                <i className='fas fa-user-circle fa-5x text-dark'></i>
+              </div>
+              <div className='text-left'>
+                <h3>
+                  {user.username}{' '}
+                  <p className='badge badge-dark'>
+                    permissions: {user.isAdmin ? 'administrator' : 'user'}
+                  </p>
+                  <p className='badge badge-danger'>
+                    bugs: #{this.getUserBugsNo(user)}
+                  </p>
+                </h3>
+              </div>
             </div>
             <button
               className='btn btn-primary'

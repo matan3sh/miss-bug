@@ -96,6 +96,13 @@ ul {
   padding: 0 1rem;
 }
 
+.user-container {
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
 .bg-primary {
   background: #0275d8;
   color: #fff;
