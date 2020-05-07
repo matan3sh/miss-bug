@@ -9,13 +9,13 @@ export default class BugAdd extends React.Component {
   };
 
   onChange = ({ target }) => {
-    const field = target.name;
-    const value = target.value;
+    let { name, value } = target;
+    value = target.value === 'number' ? parseInt(value) : value;
     this.setState((prevState) => {
       return {
         bug: {
           ...prevState.bug,
-          [field]: value,
+          [name]: value,
         },
       };
     });
@@ -27,7 +27,7 @@ export default class BugAdd extends React.Component {
     let bug = {
       title,
       description,
-      severity,
+      severity: +severity,
       creator: { nickname: this.props.user.username, _id: this.props.user._id },
     };
     this.props.onSave(bug);

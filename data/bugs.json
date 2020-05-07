@@ -1,5 +1,16 @@
 [
   {
+    "title": "Testing title",
+    "description": "Some Description2",
+    "severity": 2,
+    "creator": {
+      "nickname": "admin",
+      "_id": "9PuqWw"
+    },
+    "_id": "JHG4fL",
+    "createdAt": 1588847496639
+  },
+  {
     "title": "The Last Dance!",
     "description": "Some Description",
     "severity": "3",
