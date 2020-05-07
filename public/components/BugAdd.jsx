@@ -1,4 +1,4 @@
-export default class BugForm extends React.Component {
+export default class BugAdd extends React.Component {
   state = {
     bug: {
       title: '',
@@ -69,7 +69,7 @@ export default class BugForm extends React.Component {
           min='1'
           max='5'
           step='1'
-          value={severity}
+          value={severity || ''}
           onChange={this.onChange}
         />
         <button className='btn btn-primary btn-block'>Submit</button>

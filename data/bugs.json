@@ -1,5 +1,16 @@
 [
   {
+    "title": "The Last Dance!",
+    "description": "Some Description",
+    "severity": "3",
+    "creator": {
+      "nickname": "matan3sh",
+      "_id": "g5r5sZ"
+    },
+    "_id": "qTbRjA",
+    "createdAt": 1588831534568
+  },
+  {
     "title": "Server Side Rendering",
     "description": "Test Description by me",
     "severity": "2",
@@ -31,16 +42,5 @@
       "nickname": "test",
       "_id": "WsSNlR"
     }
-  },
-  {
-    "title": "The Last Dance!!",
-    "description": "Some Test Bug User",
-    "severity": "2",
-    "creator": {
-      "nickname": "test",
-      "_id": "WsSNlR"
-    },
-    "_id": "eIPm4D",
-    "createdAt": 1588759364965
   }
 ]
